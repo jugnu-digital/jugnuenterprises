@@ -72,7 +72,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 98765 43210",
+      content: "Call Us",
       href: "tel:+919876543210",
     },
     {
