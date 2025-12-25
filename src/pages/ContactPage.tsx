@@ -229,7 +229,7 @@ const ContactPage = () => {
               {/* WhatsApp Button */}
               <div className="pt-4">
                 <a
-                  href="https://wa.me/919876543210?text=Hello, I would like to inquire about your manufacturing services."
+                  href="https://wa.me/?text=Hello, I would like to inquire about your manufacturing services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
@@ -280,7 +280,7 @@ const ContactPage = () => {
                 </Button>
               </a>
               <a
-                href="https://wa.me/919876543210?text=Hello, I need a quick quote for garment manufacturing."
+                href="https://wa.me/?text=Hello, I need a quick quote for garment manufacturing."
                 target="_blank"
                 rel="noopener noreferrer"
               >
