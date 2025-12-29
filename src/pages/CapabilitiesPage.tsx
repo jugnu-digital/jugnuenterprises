@@ -1,7 +1,8 @@
-import { Scissors, Factory, Package, CheckCircle, Shirt, Layers, Tag, Settings } from "lucide-react";
+import { Scissors, Factory, Package, CheckCircle, Shirt, Layers, Tag, Settings, ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import fabricImage from "@/assets/fabric-rolls.jpg";
+import SectionHeading from "@/components/SectionHeading";
 
 const CapabilitiesPage = () => {
   const capabilities = [
@@ -57,14 +58,21 @@ const CapabilitiesPage = () => {
   return (
     <main>
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-dark">
-        <div className="container mx-auto px-4">
+      <section className="pt-32 pb-20 bg-gradient-dark relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
-            <span className="text-accent font-semibold uppercase tracking-wider text-sm">Our Capabilities</span>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4">
-              Manufacturing Excellence
+            <span className="inline-flex items-center gap-2 text-accent font-semibold uppercase tracking-wider text-sm mb-4 animate-fade-in">
+              <span className="w-8 h-0.5 bg-accent" />
+              Our Capabilities
+            </span>
+            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mt-4 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              Manufacturing <span className="text-accent">Excellence</span>
             </h1>
-            <p className="text-white/80 text-lg mt-6 leading-relaxed">
+            <p className="text-white/80 text-lg mt-6 leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Comprehensive apparel manufacturing solutions tailored to your business needs. From small batches to large-scale production, we deliver quality at every scale.
             </p>
           </div>
@@ -74,11 +82,19 @@ const CapabilitiesPage = () => {
       {/* Capabilities Grid */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
+          <SectionHeading 
+            badge="What We Offer"
+            title="Comprehensive Manufacturing Services"
+            description="From concept to completion, we provide end-to-end apparel manufacturing solutions."
+            centered
+          />
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability) => (
+            {capabilities.map((capability, index) => (
               <div
                 key={capability.title}
-                className="bg-card p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-border group"
+                className="bg-card p-8 rounded-2xl shadow-md hover-lift group border border-border/50 opacity-0 animate-zoom-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent transition-colors">
                   <capability.icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" />
@@ -104,23 +120,25 @@ const CapabilitiesPage = () => {
       </section>
 
       {/* Product Categories */}
-      <section className="py-24 bg-muted">
+      <section className="py-24 bg-muted relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">Product Range</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">
-                What We Manufacture
-              </h2>
+              <SectionHeading 
+                badge="Product Range"
+                title="What We Manufacture"
+              />
               <p className="text-muted-foreground leading-relaxed">
                 Our manufacturing expertise spans across a wide range of apparel categories. Whether you need basics or specialized garments, we have the capability to deliver.
               </p>
               
               <div className="grid grid-cols-2 gap-4">
-                {productCategories.map((category) => (
+                {productCategories.map((category, index) => (
                   <div
                     key={category}
-                    className="flex items-center gap-3 bg-card px-4 py-3 rounded-lg"
+                    className="flex items-center gap-3 bg-card px-4 py-3 rounded-lg hover:bg-card/80 transition-colors border border-border/50 opacity-0 animate-slide-in-left"
+                    style={{ animationDelay: `${index * 0.05}s` }}
                   >
                     <Tag className="w-4 h-4 text-accent flex-shrink-0" />
                     <span className="text-foreground text-sm font-medium">{category}</span>
@@ -128,11 +146,12 @@ const CapabilitiesPage = () => {
                 ))}
               </div>
             </div>
-            <div>
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <img
                 src={fabricImage}
                 alt="Fabric rolls and materials"
-                className="rounded-2xl shadow-lg w-full"
+                className="rounded-2xl shadow-lg w-full relative z-10 group-hover:scale-[1.02] transition-transform duration-500"
               />
             </div>
           </div>
@@ -143,36 +162,40 @@ const CapabilitiesPage = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <span className="text-accent font-semibold uppercase tracking-wider text-sm">Order Information</span>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mt-4">
-                Flexible Order Quantities
-              </h2>
-            </div>
+            <SectionHeading 
+              badge="Order Information"
+              title="Flexible Order Quantities"
+              centered
+            />
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border">
-                <div className="text-4xl font-bold font-serif text-accent mb-2">50+</div>
-                <div className="font-semibold text-foreground mb-2">Sample Orders</div>
+              <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border/50 hover-lift group">
+                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">50+</div>
+                <div className="font-semibold text-foreground mb-2 text-lg">Sample Orders</div>
                 <p className="text-muted-foreground text-sm">Perfect for testing and market evaluation</p>
               </div>
-              <div className="bg-primary p-8 rounded-2xl shadow-md text-center">
-                <div className="text-4xl font-bold font-serif text-accent mb-2">500+</div>
-                <div className="font-semibold text-primary-foreground mb-2">Regular Orders</div>
-                <p className="text-primary-foreground/80 text-sm">Our standard production runs</p>
+              <div className="bg-primary p-8 rounded-2xl shadow-lg text-center relative overflow-hidden group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy-light opacity-100" />
+                <div className="relative z-10">
+                  <div className="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">Most Popular</div>
+                  <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">500+</div>
+                  <div className="font-semibold text-primary-foreground mb-2 text-lg">Regular Orders</div>
+                  <p className="text-primary-foreground/80 text-sm">Our standard production runs</p>
+                </div>
               </div>
-              <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border">
-                <div className="text-4xl font-bold font-serif text-accent mb-2">5000+</div>
-                <div className="font-semibold text-foreground mb-2">Bulk Orders</div>
+              <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border/50 hover-lift group">
+                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">5000+</div>
+                <div className="font-semibold text-foreground mb-2 text-lg">Bulk Orders</div>
                 <p className="text-muted-foreground text-sm">Large-scale production capacity</p>
               </div>
             </div>
 
             <div className="text-center mt-12">
               <Link to="/contact">
-                <Button variant="accent" size="xl">
-                  <Factory className="w-5 h-5" />
+                <Button variant="accent" size="xl" className="group">
+                  <Phone className="w-5 h-5" />
                   Discuss Your Requirements
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </div>
