@@ -47,7 +47,7 @@ const PrivacyPage = () => {
               <div>
                 <h2 className="font-serif text-2xl font-bold text-foreground mb-4">Your Rights</h2>
                 <p>
-                  You have the right to access, correct, or delete your personal information. To exercise these rights or if you have any questions about this privacy policy, please contact us at info@jugnuenterprises.com.
+                  You have the right to access, correct, or delete your personal information. To exercise these rights or if you have any questions about this privacy policy, please contact us at jugnuenterprises786@gmail.com.
                 </p>
               </div>
 
@@ -59,7 +59,7 @@ const PrivacyPage = () => {
                 <p className="mt-2">
                   <strong className="text-foreground">Jugnu Enterprises</strong><br />
                   Basti Jodhewal, Ludhiana, Punjab, India<br />
-                  Email: info@jugnuenterprises.com
+                  Email: jugnuenterprises786@gmail.com
                 </p>
               </div>
             </div>

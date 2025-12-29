@@ -62,7 +62,7 @@ const TermsPage = () => {
                 <p className="mt-2">
                   <strong className="text-foreground">Jugnu Enterprises</strong><br />
                   Basti Jodhewal, Ludhiana, Punjab, India<br />
-                  Email: info@jugnuenterprises.com
+                  Email: jugnuenterprises786@gmail.com
                 </p>
               </div>
             </div>
