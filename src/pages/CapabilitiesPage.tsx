@@ -2,6 +2,8 @@ import { Scissors, Factory, Package, CheckCircle, Shirt, Layers, Tag, Settings, 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import fabricImage from "@/assets/fabric-rolls.jpg";
+import garmentImage from "@/assets/garment-stack.jpg";
+import threadImage from "@/assets/thread-spools.jpg";
 import SectionHeading from "@/components/SectionHeading";
 
 const CapabilitiesPage = () => {
@@ -146,13 +148,23 @@ const CapabilitiesPage = () => {
                 ))}
               </div>
             </div>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <img
-                src={fabricImage}
-                alt="Fabric rolls and materials"
-                className="rounded-2xl shadow-lg w-full relative z-10 group-hover:scale-[1.02] transition-transform duration-500"
-              />
+            <div className="space-y-4">
+              <div className="relative group rounded-2xl overflow-hidden">
+                <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img
+                  src={garmentImage}
+                  alt="Finished garments ready for delivery"
+                  className="rounded-2xl shadow-lg w-full relative z-10 group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative rounded-xl overflow-hidden group aspect-video">
+                  <img src={fabricImage} alt="Fabric rolls" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+                <div className="relative rounded-xl overflow-hidden group aspect-video">
+                  <img src={threadImage} alt="Thread spools" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                </div>
+              </div>
             </div>
           </div>
         </div>

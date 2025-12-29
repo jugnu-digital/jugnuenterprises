@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-factory.jpg";
 import manufacturingImage from "@/assets/manufacturing-detail.jpg";
 import fabricImage from "@/assets/fabric-rolls.jpg";
+import sewingImage from "@/assets/sewing-machine.jpg";
+import threadImage from "@/assets/thread-spools.jpg";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -193,6 +195,34 @@ const HomePage = () => {
             description="From inquiry to delivery, we make the manufacturing process smooth and efficient."
             centered
           />
+
+          {/* Image Gallery */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="relative rounded-xl overflow-hidden group aspect-square">
+              <img src={sewingImage} alt="Precision stitching" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span className="text-white font-medium">Precision Stitching</span>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden group aspect-square">
+              <img src={threadImage} alt="Quality threads" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span className="text-white font-medium">Quality Materials</span>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden group aspect-square">
+              <img src={manufacturingImage} alt="Manufacturing" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span className="text-white font-medium">Expert Craftsmanship</span>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden group aspect-square">
+              <img src={fabricImage} alt="Fabric selection" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+                <span className="text-white font-medium">Premium Fabrics</span>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 mb-8">
             {processSteps.map((step, index) => (

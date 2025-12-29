@@ -2,6 +2,8 @@ import { Layers, Scissors, Shirt, CheckCircle, Package, Truck, ArrowRight, Phone
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import qualityImage from "@/assets/quality-control.jpg";
+import sewingImage from "@/assets/sewing-machine.jpg";
+import qualityInspectionImage from "@/assets/quality-inspection.jpg";
 import SectionHeading from "@/components/SectionHeading";
 
 const ProcessPage = () => {
@@ -164,13 +166,29 @@ const ProcessPage = () => {
                 ))}
               </div>
             </div>
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <img
-                src={qualityImage}
-                alt="Quality control inspection"
-                className="rounded-2xl shadow-lg w-full relative z-10 group-hover:scale-[1.02] transition-transform duration-500"
-              />
+            <div className="space-y-4">
+              <div className="relative group rounded-2xl overflow-hidden">
+                <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-primary/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <img
+                  src={qualityInspectionImage}
+                  alt="Quality control inspection"
+                  className="rounded-2xl shadow-lg w-full relative z-10 group-hover:scale-[1.02] transition-transform duration-500"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative rounded-xl overflow-hidden group aspect-video">
+                  <img src={sewingImage} alt="Precision stitching" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                    <span className="text-white text-sm font-medium">Precision Stitching</span>
+                  </div>
+                </div>
+                <div className="relative rounded-xl overflow-hidden group aspect-video">
+                  <img src={qualityImage} alt="Quality check" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-3">
+                    <span className="text-white text-sm font-medium">Quality Checks</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
