@@ -24,7 +24,7 @@ const HomePage = () => {
 
   const stats = [
     { value: 15, suffix: "+", label: "Years Experience" },
-    { value: 1000, suffix: "+", label: "Orders Delivered" },
+    { value: 1, suffix: " Lakh+", label: "Orders Delivered" },
     { value: 98, suffix: "%", label: "On-Time Delivery" },
     { value: 50, suffix: "+", label: "Happy Clients" },
   ];

@@ -41,7 +41,7 @@ const WhyUsPage = () => {
 
   const stats = [
     { value: 15, suffix: "+", label: "Years in Business" },
-    { value: 1000, suffix: "+", label: "Orders Completed" },
+    { value: 1, suffix: " Lakh+", label: "Orders Completed" },
     { value: 98, suffix: "%", label: "On-Time Delivery" },
     { value: 100, suffix: "%", label: "Quality Commitment" },
   ];
