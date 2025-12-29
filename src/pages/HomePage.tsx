@@ -5,7 +5,6 @@ import heroImage from "@/assets/hero-factory.jpg";
 import manufacturingImage from "@/assets/manufacturing-detail.jpg";
 import fabricImage from "@/assets/fabric-rolls.jpg";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import TestimonialCard from "@/components/TestimonialCard";
 import SectionHeading from "@/components/SectionHeading";
 
 const HomePage = () => {
@@ -28,24 +27,6 @@ const HomePage = () => {
     { value: 1000, suffix: "+", label: "Orders Delivered" },
     { value: 98, suffix: "%", label: "On-Time Delivery" },
     { value: 50, suffix: "+", label: "Happy Clients" },
-  ];
-
-  const testimonials = [
-    {
-      quote: "Jugnu Enterprises has been our trusted manufacturing partner for over 5 years. Their quality and consistency are unmatched.",
-      author: "Rajesh Kumar",
-      company: "Fashion Retail Co.",
-    },
-    {
-      quote: "Excellent communication and they always deliver on time. Our go-to partner for bulk orders.",
-      author: "Amit Sharma",
-      company: "Textile Traders",
-    },
-    {
-      quote: "The quality control is exceptional. Every garment meets our exact specifications.",
-      author: "Priya Patel",
-      company: "Brand Solutions",
-    },
   ];
 
   const processSteps = [
@@ -283,30 +264,6 @@ const HomePage = () => {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <SectionHeading 
-            badge="Testimonials"
-            title="What Our Clients Say"
-            description="Don't just take our word for it - hear from businesses who have partnered with us."
-            centered
-          />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div 
-                key={testimonial.author} 
-                className="opacity-0 animate-fade-in"
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <TestimonialCard {...testimonial} />
-              </div>
-            ))}
           </div>
         </div>
       </section>
