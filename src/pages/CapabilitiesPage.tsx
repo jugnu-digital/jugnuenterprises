@@ -170,7 +170,7 @@ const CapabilitiesPage = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border/50 hover-lift group">
-                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">50+</div>
+                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">200+</div>
                 <div className="font-semibold text-foreground mb-2 text-lg">Sample Orders</div>
                 <p className="text-muted-foreground text-sm">Perfect for testing and market evaluation</p>
               </div>
@@ -178,13 +178,13 @@ const CapabilitiesPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary to-navy-light opacity-100" />
                 <div className="relative z-10">
                   <div className="inline-block bg-accent/20 text-accent text-xs font-semibold px-3 py-1 rounded-full mb-4">Most Popular</div>
-                  <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">500+</div>
+                  <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">10,000+</div>
                   <div className="font-semibold text-primary-foreground mb-2 text-lg">Regular Orders</div>
                   <p className="text-primary-foreground/80 text-sm">Our standard production runs</p>
                 </div>
               </div>
               <div className="bg-card p-8 rounded-2xl shadow-md text-center border border-border/50 hover-lift group">
-                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">5000+</div>
+                <div className="text-5xl font-bold font-serif text-accent mb-2 group-hover:scale-110 transition-transform">1 Lakh+</div>
                 <div className="font-semibold text-foreground mb-2 text-lg">Bulk Orders</div>
                 <p className="text-muted-foreground text-sm">Large-scale production capacity</p>
               </div>
