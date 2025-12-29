@@ -97,8 +97,8 @@ const ContactPage = () => {
     {
       icon: Mail,
       title: "Email",
-      content: "info@jugnuenterprises.com",
-      href: "mailto:info@jugnuenterprises.com",
+      content: "jugnuenterprises786@gmail.com",
+      href: "mailto:jugnuenterprises786@gmail.com",
     },
     {
       icon: Clock,
