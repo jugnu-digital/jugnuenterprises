@@ -265,7 +265,7 @@ const ContactPage = () => {
                 <h3 className="font-serif text-xl font-semibold text-foreground mb-4">Our Location</h3>
                 <div className="rounded-2xl overflow-hidden shadow-lg h-64">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54847.05454820001!2d75.79034!3d30.9009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a837462345a7d%3A0x681f4bddec7a84d8!2sLudhiana%2C%20Punjab%2C%20India!5e0!3m2!1sen!2sus!4v1234567890"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3423.8547854892166!2d75.8487!3d30.8877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a83c2e2e6fd21%3A0x7f7bde56c5e3b8e8!2sBasti%20Jodhewal%2C%20Ludhiana%2C%20Punjab%2C%20India!5e0!3m2!1sen!2sin!4v1703849600000!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
