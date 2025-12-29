@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { z } from "zod";
 
 const contactSchema = z.object({
@@ -35,12 +36,23 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setErrors({});
 
     try {
       const validatedData = contactSchema.parse(formData);
       
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      console.log("Sending contact form data...");
+      
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: validatedData,
+      });
+
+      if (error) {
+        console.error("Error sending email:", error);
+        throw new Error(error.message || "Failed to send message");
+      }
+
+      console.log("Email sent successfully:", data);
       
       toast({
         title: "Message Sent!",
@@ -57,6 +69,13 @@ const ContactPage = () => {
           }
         });
         setErrors(newErrors);
+      } else {
+        console.error("Submission error:", error);
+        toast({
+          title: "Error",
+          description: "Failed to send message. Please try again or contact us directly.",
+          variant: "destructive",
+        });
       }
     } finally {
       setIsSubmitting(false);
