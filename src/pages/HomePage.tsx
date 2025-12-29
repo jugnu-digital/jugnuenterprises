@@ -206,7 +206,7 @@ const HomePage = () => {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/?text=Hello, I would like to inquire about your manufacturing services."
+                href="https://wa.me/919316478958?text=Hello, I would like to inquire about your manufacturing services."
                 target="_blank"
                 rel="noopener noreferrer"
               >

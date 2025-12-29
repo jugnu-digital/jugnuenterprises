@@ -92,7 +92,7 @@ const ContactPage = () => {
       icon: Phone,
       title: "Phone",
       content: "Call Us",
-      href: "tel:+919876543210",
+      href: "tel:+919316478958",
     },
     {
       icon: Mail,
@@ -248,7 +248,7 @@ const ContactPage = () => {
               {/* WhatsApp Button */}
               <div className="pt-4">
                 <a
-                  href="https://wa.me/?text=Hello, I would like to inquire about your manufacturing services."
+                  href="https://wa.me/919316478958?text=Hello, I would like to inquire about your manufacturing services."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block"
@@ -292,14 +292,14 @@ const ContactPage = () => {
               For immediate assistance, call us directly or send a WhatsApp message with your requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+919876543210">
+              <a href="tel:+919316478958">
                 <Button variant="default" size="lg">
                   <Phone className="w-4 h-4" />
                   Call Now
                 </Button>
               </a>
               <a
-                href="https://wa.me/?text=Hello, I need a quick quote for garment manufacturing."
+                href="https://wa.me/919316478958?text=Hello, I need a quick quote for garment manufacturing."
                 target="_blank"
                 rel="noopener noreferrer"
               >
