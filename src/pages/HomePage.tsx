@@ -62,10 +62,13 @@ const HomePage = () => {
               MSME Registered | Established 2008
             </div>
             
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
-              Reliable Apparel Manufacturing Partner from{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent to-gold-light bg-clip-text text-transparent">Ludhiana</span>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight animate-fade-in" style={{ animationDelay: "0.1s" }}>
+              <span className="text-gradient bg-gradient-to-r from-accent to-gold-light bg-clip-text text-transparent">Jugnu Enterprises</span>
             </h1>
+            
+            <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-white/90 font-medium animate-fade-in" style={{ animationDelay: "0.15s" }}>
+              Reliable Apparel Manufacturing Partner from Ludhiana
+            </p>
             
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
               Delivering quality garment manufacturing solutions since 2008. Your trusted partner for premium apparel production.
